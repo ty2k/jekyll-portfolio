@@ -1,0 +1,21 @@
+---
+layout: default
+meta-description: "Blog articles from full stack developer Tyler Krys. Posts about Node.js, Express, Nodemailer."
+meta-canonical: https://tylerkrys.ca/blog
+perma-link: /blog
+title: "Blog - Tyler Krys"
+title_on_page: "Blog"
+---
+
+<div class="container container-blog">
+  <div class="jumbotron">
+    <h1>{{ page.title_on_page }}</h1>
+    <p>This is a list of all the blog articles by Tyler Krys, a full-stack web developer.</p>
+  </div>
+  {% for post in site.posts %}
+    <a href="{{ post.url }}">
+      <h2>{{ post.title_on_page }}</h2>
+    </a>
+    <p>{{ post.content | strip_html | truncatewords: 40 }}<a href="{{ post. url }}" title=" {{ post.title }}">(read more)</a></p>
+  {% endfor %}
+</div>
