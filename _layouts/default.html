@@ -7,21 +7,19 @@
     <title>{{ page.title }}</title>
     {% include head.html %}
     <!-- Meta Description -->
-    <meta name="Description" content="{{ page.meta-description }}">
+    <meta name="Description" content="{{ page.meta-description }}" />
     <!-- Open Graph -->
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tylerkrys.ca" />
-    <meta property="og:image" content="https://tylerkrys.ca/assets/images/tyler-krys-web-developer-og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://tylerkrys.ca/assets/images/tyler-krys-web-developer-og-image.jpg"
+    />
     <!-- Canonical link -->
-    <link rel="canonical" href="{{ page.meta-canonical }}">
+    <link rel="canonical" href="{{ page.meta-canonical }}" />
   </head>
   <body>
-    {% include header.html %}
-
-    {{ content }}
-    
-    {% include footer.html %}
-    {% include bootstrap.html %}
+    {% include header.html %} {{ content }} {% include footer.html %}
   </body>
 </html>
