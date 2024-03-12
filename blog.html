@@ -7,15 +7,19 @@ title: "Blog - Tyler Krys"
 title_on_page: "Blog"
 ---
 
-<div class="container container-blog">
-  <div class="jumbotron">
-    <h1>{{ page.title_on_page }}</h1>
-    <p>This is a list of all the blog articles by Tyler Krys, a full-stack web developer.</p>
-  </div>
-  {% for post in site.posts %}
-    <a href="{{ post.url }}">
-      <h2>{{ post.title_on_page }}</h2>
+<div class="blog-index">
+  <main>
+    <h1 class="serif">{{ page.title_on_page }}</h1>
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="title">
+      <h2 class="serif">{{ post.title_on_page }}</h2>
     </a>
-    <p>{{ post.content | strip_html | truncatewords: 40 }}<a href="{{ post. url }}" title=" {{ post.title }}">(read more)</a></p>
-  {% endfor %}
+    <p class="serif">
+      {{ post.content | strip_html | truncatewords: 40 }}
+      <a href="{{ post. url }}" title=" {{ post.title }}" class="read-more">
+        (read more)
+      </a>
+    </p>
+    {% endfor %}
+  </main>
 </div>
